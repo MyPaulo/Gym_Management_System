@@ -1,0 +1,13 @@
+
+
+Automated Note to Ian and rashid
+
+Hi Syed and Rashid,
+
+For our project time tracking, we have been using an Excel sheet stored in our GitLab repository, which is linked through the school website.
+
+I have shared the file with both of you via email. During our project presentation, we will include a screenshot of the time log and briefly walk through how we managed our time throughout the project.
+
+If you run into any issues accessing the file, please let me know. I won’t be available as I wll be working on my JavaFX/Swing GUI project for COMP 3220 (Object-Oriented Design & Object Oriented Analysis).
+
+Thanks!
