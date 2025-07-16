@@ -1,0 +1,88 @@
+Author: Paul Osuji
+
+# Terminal Recording Guide 
+
+A collection of methods to record Linux terminal sessions for documentation, demonstrations, and sharing.
+
+## Method 1: asciinema (Simple Recording & Playback)
+
+### Installation
+```terminal
+# Usually pre-installed on Kali Linux
+# If not installed:
+sudo apt install asciinema
+```
+
+### Usage
+```terminal
+# Start recording
+asciinema rec gym-demo.cast  or asciinema rec filename.cast
+
+# Run your application (example with Java) or it can be bash, python, c, etc 
+java Main
+
+# Stop recording
+# Press Ctrl+C to stop
+
+# Play back locally
+asciinema play gym-demo.cast
+
+# Upload to share (requires asciinema account)
+asciinema upload gym-demo.cast
+```
+
+
+## Method 2: termtosvg (GitHub-friendly SVG Output) I tested all method but this is the best on github
+
+### Installation
+```bash
+pip install termtosvg
+```
+
+### Usage
+```bash
+# Start recording (automatically generates SVG)
+termtosvg
+
+#Note if you enter termtosvg without filename.svg it automatically create one usually store /tmp folder after recording
+
+# Run your Java application or any program of your choice
+java Main
+
+# Stop recording (Ctr+C or Ctrl+D)
+# Press Ctrl+C - SVG file is automatically generated
+```
+
+## Method 3: asciinema + SVG Conversion
+
+### Installation
+```bash
+# Install asciinema
+sudo apt install asciinema
+
+# Install SVG conversion tool
+npm install -g svg-term-cli
+```
+
+### Usage
+```bash
+# Record with asciinema
+asciinema rec demo.cast
+
+# Run your application
+java Main
+
+# Stop recording (Ctrl+C)
+
+# Convert to SVG for GitHub
+svg-term --cast demo.cast --out demo.svg
+```
+
+## Use Cases
+- **Method 1**: Best for quick recordings and sharing on asciinema.org
+- **Method 2**: Direct SVG output, perfect for GitHub READMEs
+- **Method 3**: More control over SVG generation and customization options
+
+## File Extensions
+- `.cast` - asciinema recording format
+- `.svg` - Scalable Vector Graphics (GitHub compatible)
